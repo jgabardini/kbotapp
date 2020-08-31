@@ -1,8 +1,8 @@
-![](https://github.com/juanprueba/kbotapp/workflows/Ruby/badge.svg)
+![](https://github.com/jgabardini/kbotapp/workflows/Ruby/badge.svg)
 
 para ver el reporte de analisis de codigo:
 
-https://juanprueba.github.io/kbotapp/overview.html#
+https://jgabardini.github.io/kbotapp/overview.html#
 
 
 ### Para el setup sin docker:
