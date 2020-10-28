@@ -5,7 +5,7 @@ require './lib/kbot'
 
 kbot= nil
 momento= 0
-get '/:momento?' do |cuando|
+get '/:cuando?' do |cuando|
     kbot= Kbot.new 
     if cuando
         momento= cuando.to_i
