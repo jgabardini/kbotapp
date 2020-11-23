@@ -4,18 +4,17 @@ require 'time'
 require './lib/kbot'
 enable :sessions
 
-kbot= nil
 get '/' do 
-    kbot= Kbot.new 
+    session[:kbot]= Kbot.new 
     session[:momento]= momento_del_dia
     erb :index
 end
 
 post '/chat' do
     if params[:ingreso]
-        kbot.ingresa params[:ingreso], session[:momento]
+        session[:kbot].ingresa params[:ingreso], session[:momento]
     end
-    @mensajes=  kbot.mensajes
+    @mensajes=  session[:kbot].mensajes
     
     erb :chat
 end
@@ -29,7 +28,7 @@ def momento_del_dia
 end
 
 get '/fijarhora/:cuando' do |cuando|
-    kbot= Kbot.new 
+    session[:kbot]= Kbot.new 
     session[:momento]= cuando.to_i
     erb :index
 end
